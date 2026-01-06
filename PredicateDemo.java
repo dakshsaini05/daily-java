@@ -49,5 +49,15 @@ public class PredicateDemo{
 		//display numbers less than 50 which must be even
 		Predicate<Integer> EvenAndLessThnFifty = p1.and(p2);
 		checkPredicate(EvenAndLessThnFifty, number);
+		
+		System.out.println();
+		
+		Predicate<Integer> EvenAndLessThnFifty2 = p1.or(p2);
+		checkPredicate(EvenAndLessThnFifty2, number);
+		
+		Predicate<String> eHello = Predicate.isEqual("Hello");
+		
+		System.out.println(eHello.test("Hello"));
+		System.out.println(eHello.test("World"));
 	}
 }
